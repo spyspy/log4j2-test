@@ -22,7 +22,9 @@
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+        <!-- Root(根紀錄) 設定全部的訊息  並且把 根紀錄 等級設定為 DEBUG -->
         <Root level="DEBUG">
+            <!-- 自設定的 LogToConsole 是要顯示 System.out 的內容在 console 螢幕-->
             <AppenderRef ref="LogToConsole"/>
         </Root>
     </Loggers>
