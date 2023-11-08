@@ -12,3 +12,34 @@
 2023-11-08 15:34:20,965 DEBUG Go [main] 5
 2023-11-08 15:34:46,193 DEBUG Go [main] Hello from Log4j 2
 2023-11-08 15:34:46,199 DEBUG Go [main] 5
+2023-11-08 16:29:23,467 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 16:29:23,474 DEBUG Go [main] 5
+2023-11-08 16:29:48,718 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 16:29:48,724 DEBUG Go [main] 5
+2023-11-08 16:30:29,959 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:30:29,964 DEBUG Go [main] 5
+2023-11-08 16:34:10,171 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:34:10,177 DEBUG Go [main] 5
+2023-11-08 16:34:48,515 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:34:48,523 DEBUG Go [main] 5
+2023-11-08 16:34:48,525 DEBUG c.GoTheHell [main] GoTheHell GoTheHell  V001
+2023-11-08 16:35:17,894 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:35:17,900 DEBUG Go [main] 5
+2023-11-08 16:35:17,901 DEBUG c.GoTheHell [main] GoTheHell GoTheHell  V001
+2023-11-08 16:35:53,773 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:35:53,790 DEBUG Go [main] 5
+2023-11-08 16:35:53,791 DEBUG c.GoTheHell [main] GoTheHell GoTheHell  V001
+2023-11-08 16:36:27,314 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:36:27,319 DEBUG Go [main] 5
+2023-11-08 16:36:35,532 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:36:35,539 DEBUG Go [main] 5
+2023-11-08 16:37:19,310 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:37:19,315 DEBUG Go [main] 5
+2023-11-08 16:37:19,316 INFO c.GoTheHell [main] GoTheHell GoTheHell  V001
+2023-11-08 16:37:52,929 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:37:52,935 DEBUG Go [main] 5
+2023-11-08 16:37:52,936 INFO c.GoTheHell [main] GoTheHell GoTheHell  V001
+2023-11-08 16:38:07,373 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:38:07,380 DEBUG Go [main] 5
+2023-11-08 16:38:21,070 DEBUG Go [main] Hello from Log4j 2 - V111
+2023-11-08 16:38:21,074 DEBUG Go [main] 5

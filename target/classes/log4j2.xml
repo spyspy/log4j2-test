@@ -18,11 +18,17 @@
     </Appenders>
     <Loggers>
         <!-- avoid duplicated logs with additivity=false -->
-        <Logger name="Go" level="debug" additivity="false">
+        <Logger name="Go" level="DEBUG" additivity="false">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+<!--        <Logger name="com.GoTheHell" level="INFO" additivity="false">-->
+<!--            <AppenderRef ref="LogToRollingFile"/>-->
+<!--            <AppenderRef ref="LogToConsole"/>-->
+<!--        </Logger>-->
+        <!-- Root(根紀錄) 設定全部的訊息(如果上面沒有特別設定的話)  並且把 根紀錄 等級設定為 DEBUG -->
         <Root level="DEBUG">
+            <!-- 自設定的 LogToConsole 是要顯示 System.out 的內容在 console 螢幕-->
             <AppenderRef ref="LogToConsole"/>
         </Root>
     </Loggers>
