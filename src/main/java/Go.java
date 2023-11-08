@@ -16,7 +16,12 @@ public class Go {
 
         // with Java 8, we can do this, no need to check the log level
         logger.debug("{}", () -> getNumber());
-
+        logger.fatal("GO: FATAL"); // 印出
+        logger.error("GO: ERROR"); // 印出
+        logger.warn("GO: WARN");
+        logger.info("GO: INFO");
+        logger.debug("GO: DEBUG");
+        logger.trace("GO: TRACE");
         GoTheHell goTheHell = new GoTheHell();
         goTheHell.runMessage();
 
