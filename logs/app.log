@@ -1,0 +1,14 @@
+2023-11-08 15:26:47,095 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:26:47,101 DEBUG Go [main] 5
+2023-11-08 15:27:32,052 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:27:32,057 DEBUG Go [main] 5
+2023-11-08 15:30:01,465 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:30:01,470 DEBUG Go [main] 5
+2023-11-08 15:31:19,098 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:31:19,104 DEBUG Go [main] 5
+2023-11-08 15:33:33,280 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:33:33,284 DEBUG Go [main] 5
+2023-11-08 15:34:20,960 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:34:20,965 DEBUG Go [main] 5
+2023-11-08 15:34:46,193 DEBUG Go [main] Hello from Log4j 2
+2023-11-08 15:34:46,199 DEBUG Go [main] 5

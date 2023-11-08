@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="log4jtest" />
-        <module name="log4j2-test" />
       </profile>
     </annotationProcessing>
   </component>
