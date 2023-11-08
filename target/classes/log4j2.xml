@@ -2,15 +2,25 @@
 <Configuration status="DEBUG">
     <Appenders>
         <Console name="LogToConsole" target="SYSTEM_OUT">
+            <!--正常 PatternLayout-->
 <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %limit(100){{%msg}}%n%n"/>
+            <!--
+            PatternLayout 使用定義
+            https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html
+            將  %m  改成  %.-100m   可以將 msg 開始的100個字元保留
+            %.100m  是留下最後 100 個字元
+            -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %.-100m@@%n"/>
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %limit(100){%msg}%n"/>-->
         </Console>
+
         <RollingFile name="LogToRollingFile" fileName="logs/app.log"
                      filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+                <Pattern>%d %p %c{1.} [%t] %.-1000m%n</Pattern>
             </PatternLayout>
             <Policies>
+                <!-- TimeBasedTriggeringPolicy  只會紀錄每次執行的LOG紀錄，不會累積-->
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
@@ -19,23 +29,23 @@
     </Appenders>
     <Loggers>
         <!-- avoid duplicated logs with additivity=false -->
-        <Logger name="Go" level="DEBUG" additivity="false">
+        <Logger name="GoLogTest" level="DEBUG" additivity="false">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
-            <Filters>
-                <Filter ref="TruncatingFilter" maxLength="100"/>
-            </Filters>
+<!--            <Filters>-->
+<!--                <Filter ref="TruncatingFilter" maxLength="100"/>-->
+<!--            </Filters>-->
         </Logger>
-<!--        <Logger name="com.GoTheHell" level="INFO" additivity="false">-->
-<!--            <AppenderRef ref="LogToRollingFile"/>-->
-<!--            <AppenderRef ref="LogToConsole"/>-->
-<!--        </Logger>-->
+        <Logger name="com.GoTheHell" level="INFO" additivity="false">
+            <AppenderRef ref="LogToRollingFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
         <!-- Root(根紀錄) 設定全部的訊息(如果上面沒有特別設定的話)  並且把 根紀錄 等級設定為 DEBUG
             這個打開之後，GoTheHell如果沒設定，他的info 也會印出，是有層級關係
             如果設定 INFO  只能看到 FATAL, ERROR, WARN, INFO 看不到 DEBUG, TRACE
             如果設定 ERROR 只能看到 FATAL, ERROR
         -->
-        <Root level="INFO">
+        <Root level="DEBUG">
             <!-- 自設定的 LogToConsole 是要顯示 System.out 的內容在 console 螢幕-->
             <AppenderRef ref="LogToConsole"/>
         </Root>
