@@ -9,5 +9,8 @@
         <module name="log4jtest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="log4j2-test" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

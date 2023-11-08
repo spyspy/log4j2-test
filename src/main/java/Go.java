@@ -7,7 +7,7 @@ public class Go {
 
     public static void main(String[] args) {
 
-        logger.debug("Hello from Log4j 2 - V111");
+        logger.debug("Hello from Log4j 2 - V111 ============================(Start)");
 
         // in old days, we need to check the log level to increase performance
         /*if (logger.isDebugEnabled()) {
@@ -22,8 +22,10 @@ public class Go {
         logger.info("GO: INFO");
         logger.debug("GO: DEBUG");
         logger.trace("GO: TRACE");
+        logger.debug("Hello from Log4j 2 - V111 ============================(MIDDLE)");
         GoTheHell goTheHell = new GoTheHell();
         goTheHell.runMessage();
+        logger.debug("Hello from Log4j 2 - V111 ============================(END)");
 
     }
 

@@ -28,7 +28,7 @@
 <!--        </Logger>-->
         <!-- Root(根紀錄) 設定全部的訊息(如果上面沒有特別設定的話)  並且把 根紀錄 等級設定為 DEBUG
             這個打開之後，GoTheHell如果沒設定，他的info 也會印出，是有層級關係
-            如果設定 INFO  看不到 DEBUG, TRACE
+            如果設定 INFO  只能看到 FATAL, ERROR, WARN, INFO 看不到 DEBUG, TRACE
             如果設定 ERROR 只能看到 FATAL, ERROR
         -->
         <Root level="INFO">
