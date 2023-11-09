@@ -7,17 +7,18 @@
             <!--
             PatternLayout 使用定義
             https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html
+            新版: https://logging.apache.org/log4j/2.x/manual/layouts.html
             將  %m  改成  %.-100m   可以將 msg 開始的100個字元保留
             %.100m  是留下最後 100 個字元
             -->
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %.-100m@@%n"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - @@(%L) %.-1000m%n"/>
 <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %limit(100){%msg}%n"/>-->
         </Console>
 
         <RollingFile name="LogToRollingFile" fileName="logs/app.log"
                      filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %.-1000m%n</Pattern>
+                <Pattern>%d %p %c{1.} [%t] @@(%L) %.-1000m%n</Pattern>
             </PatternLayout>
             <Policies>
                 <!-- TimeBasedTriggeringPolicy  只會紀錄每次執行的LOG紀錄，不會累積-->

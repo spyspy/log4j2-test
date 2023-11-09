@@ -1,4 +1,4 @@
-import com.GoTheHell;
+import com.logtest.GoTheHell;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
