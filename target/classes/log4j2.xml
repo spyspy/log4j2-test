@@ -37,7 +37,11 @@
 <!--                <Filter ref="TruncatingFilter" maxLength="100"/>-->
 <!--            </Filters>-->
         </Logger>
-        <Logger name="com.GoTheHell" level="INFO" additivity="false">
+        <Logger name="com.logtest.GoTheHell" level="INFO" additivity="false">
+            <AppenderRef ref="LogToRollingFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="org.hibernate" level="DEBUG" additivity="false">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Logger>
@@ -49,6 +53,7 @@
         <Root level="DEBUG">
             <!-- 自設定的 LogToConsole 是要顯示 System.out 的內容在 console 螢幕-->
             <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToRollingFile"/>
         </Root>
     </Loggers>
 </Configuration>
